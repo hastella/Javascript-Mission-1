@@ -18,6 +18,14 @@ if (localStorage.getItem("menu-state") === "open") {
   window.addEventListener("load", () => body.classList.add("body"));
 }
 
+//localstorage에 저장된 상태에 따라 visibility 변경
+if (localStorage.getItem("active") === "true") {
+  document.querySelector("nav").classList.add("active");
+  document.body.style.visibility = "visible";
+} else {
+  document.body.style.visibility = "visible";
+}
+
 // 초기 렌더링 시에 불필요한 트랜지션 방지
 window.addEventListener(
   "load",
