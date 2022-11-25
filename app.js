@@ -15,7 +15,7 @@ navBtn.addEventListener("click", function () {
 });
 if (localStorage.getItem("menu-state") === "open") {
   nav.classList.toggle("active");
-  window.addEventListener("load", () => body.classList.add("body"));
+  window.addEventListener("load", () => document.body.classList.add("body"));
 }
 
 //localstorage에 저장된 상태에 따라 visibility 변경
